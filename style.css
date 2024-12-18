@@ -1,0 +1,120 @@
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  margin: 20px;
+  background: #f8f8f8;
+  color: #333;
+}
+
+header, footer {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 20px 0;
+  background: linear-gradient(135deg, #007acc, #005ea6);
+  color: #fff;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+main {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+section {
+  background: #ffffff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+button {
+  background: #007acc;
+  border: none;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #005ea6;
+  transform: scale(1.05);
+}
+
+.ag-result {
+  margin-top: 20px;
+  font-size: 14px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  line-height: 1.5;
+}
+
+.config-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.config-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 120px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+select {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.word-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.word-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 120px;
+}
+
+.word-group input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.error-msg {
+  color: red;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Ajuste para melhorar a responsividade em telas menores */
+@media (max-width: 600px) {
+  .config-section, .word-inputs {
+    flex-direction: column;
+  }
+  
+  .config-group, .word-group {
+    min-width: 100%;
+  }
+}

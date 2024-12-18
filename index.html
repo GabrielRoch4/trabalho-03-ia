@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Criptoaritmética com AG</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header>
+    <h1>Criptoaritmética com Algoritmo Genético</h1>
+</header>
+<main>
+    <section class="problem-section">
+        <h2>Entre com as palavras do seu problema</h2>
+        <p>Digite abaixo três palavras (por exemplo: SEND, MORE, MONEY) para o problema WORD1 + WORD2 = WORD3.</p>
+        <div class="word-inputs">
+            <div class="word-group">
+                <label for="word1">Palavra 1:</label>
+                <input type="text" id="word1" placeholder="Ex: SEND" />
+            </div>
+            <div class="word-group">
+                <label for="word2">Palavra 2:</label>
+                <input type="text" id="word2" placeholder="Ex: MORE" />
+            </div>
+            <div class="word-group">
+                <label for="word3">Palavra 3 (resultado):</label>
+                <input type="text" id="word3" placeholder="Ex: MONEY" />
+            </div>
+        </div>
+        <p id="wordError" class="error-msg"></p>
+    </section>
+
+    <section class="config-section">
+        <h3>Configurações do AG</h3>
+        <div class="config-group">
+            <label for="crossoverRate">Taxa de Crossover:</label>
+            <select id="crossoverRate">
+                <option value="0.6">60%</option>
+                <option value="0.8" selected>80%</option>
+            </select>
+        </div>
+        <div class="config-group">
+            <label for="mutationRate">Taxa de Mutação:</label>
+            <select id="mutationRate">
+                <option value="0.05">5%</option>
+                <option value="0.1" selected>10%</option>
+            </select>
+        </div>
+        <div class="config-group">
+            <label for="selectionMethod">Seleção:</label>
+            <select id="selectionMethod">
+                <option value="roulette">Roleta</option>
+                <option value="tournament" selected>Torneio (3)</option>
+            </select>
+        </div>
+        <div class="config-group">
+            <label for="crossoverMethod">Crossover:</label>
+            <select id="crossoverMethod">
+                <option value="cycle">Cíclico</option>
+                <option value="pmx" selected>PMX</option>
+            </select>
+        </div>
+        <div class="config-group">
+            <label for="reinsertionMethod">Reinserção:</label>
+            <select id="reinsertionMethod">
+                <option value="r1">Ordenada (Pais+Filhos)</option>
+                <option value="r2" selected>Com Elitismo 20%</option>
+            </select>
+        </div>
+    </section>
+
+    <section class="ag-section">
+        <h3>Resultado do Algoritmo Genético</h3>
+        <p>
+            Pressione o botão para executar o AG.
+        </p>
+        <button id="runAGBtn">Executar AG</button>
+        <div id="agResult" class="ag-result"></div>
+    </section>
+</main>
+
+<footer>
+    <p>Disciplina: Inteligência Artificial e Computacional</p>
+    <p>Professora: Dra. Danielli Araújo Lima</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
